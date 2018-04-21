@@ -1,0 +1,350 @@
+
+* {
+	font-family: verdana;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+  background-color: #555555;
+}
+
+form {
+	width: auto;
+	height: auto;
+	overflow: visible;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.p_produto {
+	color: #888888;
+	font-size: 15px;
+	width: 100%;
+	float: left;
+}
+
+.input_text {
+	border: none;
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	text-align: center;
+	background-color: #EFEFEF;
+/*	background-image: url("../img/barra_item_lista.png");
+	background-position: center center;
+	background-repeat: repeat-x;*/
+}
+
+.input_text_divs {
+	border: none;
+	width: 99%;
+	font-size: 30px;
+	text-align: center;
+	background-color: #444444;
+	border: solid #FFFF00 1px;
+	color: #BBBBBB;
+}
+
+.input_text_moeda {
+	border: none;
+	width: 230px;
+	font-size: 30px;
+	text-align: center;
+	background-color: #444444;
+	border: solid #FFFF00 1px;
+	color: #BBBBBB;
+	float: left;
+}
+
+.input_button {
+	width: 60px;
+	height: 60px;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 5px 15px 0px 15px;
+	border: solid #FFFF00 1px;
+	border-radius: 10px;
+	background-color: #555555;
+	color: #FFFFFF;
+}
+
+.input_aplicar {
+	background-image: url("../img/botao_aplicar.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.input_fechar {
+	background-image: url("../img/botao_fechar.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.input_remover {
+	background-image: url("../img/botao_remover.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.input_limpar {
+	background-image: url("../img/botao_limpar.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	float: right;
+	margin: -5px 0px 0px 5px;
+}
+
+#div_conteiner_lista td .prod_no_carrinho {
+	background-color: #00AB00 !important;
+	color: #FFFFFF !important;
+}
+
+#div_edita_produto,
+#div_cria_produto,
+#div_aplica_dinheiro {
+	position: absolute;
+	top: 0px;
+	width: 300px;
+	height: auto;
+	padding: 10px;
+	text-align: center;
+	background-color: #222222;
+	border: solid #666666 1px;
+	display: none;
+}
+
+#div_tela_preta {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: none;
+	opacity: 0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	z-index: 10;
+}
+
+#div_tela_preta a {
+	text-decoration: none;
+	color: #FFFF00;
+	font-size: 35px;
+	background-color: #121212;
+	padding: 20px;
+	border: solid #545454 1px;
+	border-radius: 10px;
+}
+
+#div_edita_produto h3,
+#div_cria_produto h3,
+#div_aplica_dinheiro h3 {
+	width: 100%;
+	color: #AAAAAA;
+	font-size: 25px;
+	text-align: center;
+	float: left;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#div_edita_produto   { z-index: 30; }
+#div_cria_produto    { z-index: 40; }
+#div_aplica_dinheiro { z-index: 50; }
+
+/* Caixa de dialogo para salvar as listas */
+
+#div_salvar_lista {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background-color: #222222;
+	display: none;
+	z-index: 300;
+	color: #FFFFFF;
+	vertical-align: middle;
+	padding-bottom: 10px;
+}
+
+#div_salvar_lista h2 {
+	margin: 15px;
+}
+
+#div_salvar_lista .input_salvar_mesmo_nome {
+	width: 100%;
+	height: 40px;
+	color: #0099FF;
+	border: none;
+	background-color: #000000;
+	background-image: url("../img/fundo_input_salvar_mesmo_nome.png");
+	background-position: center center;
+	background-repeat: repeat-x;
+	border-radius: 7px;
+}
+
+#div_salvar_lista .p_salvar_mesmo_nome {
+	margin: 10px;
+}
+
+#div_salvar_lista .p_salvar_novo_nome {
+	margin: 20px;
+	padding: 15px;
+	border: solid #0099FF 1px;
+}
+
+/* Menu|Abrir Listas */
+
+#div_menu {
+	width: 341px;
+	height: auto;
+	background-color: #222222;
+	color: #FFFFFF;
+	display: none;
+	border: solid #333333 1px;
+	position: absolute;
+	top: 10px;
+	left: 8px;
+	z-index: 400;
+}
+
+#div_menu h2 {
+	width: 100%;
+	height: 30px;
+	font-size: 22px;
+	text-align: center;
+	border-bottom: solid #888888 1px;
+}
+
+#div_menu ul {
+	list-style: none;
+}
+
+#div_menu ul li {
+	width: 111.5px;
+	height: 111px;
+	float: left;
+	margin: 1px;
+	background-color: #111111;
+}
+
+#div_menu ul li a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#div_menu .p_fechar_menu {
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+
+#div_menu .p_fechar_menu a {
+	width: 100%;
+	height: 40px;
+	display: block;
+	font-size: 25px;
+	padding-top: 5px;
+	background-image: url("../img/fundo_criar_nova_lista.png");
+	background-position: center center;
+	background-repeat: repeat-x;
+}
+
+#div_menu img {
+	width: 100px;
+	height: 100px;
+}
+
+/* Caixa de pesquisar item em uma lista */
+
+#div_pesquisar_produto {
+	width: 90%;
+	height: 95%;
+	padding: 5%;
+	background-color: #222222;
+	color: #FFFFFF;
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 500;
+	text-align: center;
+}
+
+#div_pesquisar_produto h3 {
+	width: 100%;
+	color: #AAAAAA;
+	font-size: 25px;
+	text-align: center;
+	float: left;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#div_pesquisar_produto #div_mostrar_pesquisas {
+	width: 96%;
+	padding: 2%;
+	height: 300px;
+	overflow: hidden;
+	overflow-y: auto;
+	background-color: #333333;
+	color: #999999;
+	float: left;
+	margin-top: 10px;
+	display: none;
+	text-align: left;
+}
+
+#div_pesquisar_produto #div_mostrar_pesquisas input {
+	width: 99%;
+	padding: 1%;
+	margin: 0px;
+	margin-top: 2px;
+	border: none;
+	background-color: #000055;
+	color: #0099FF;
+	text-align: left;
+	height: 40px;
+	font-size: 25px;
+}
+
+/*Internet Explorer*/
+/*@-ms-viewport {
+	width: device-width;
+	zoom: 1;
+	min-zoom: 0.5;
+	max-zoom: 4;
+	orientation: portrait;
+}*/
+
+/*Opera*/
+/*@-o-viewport {
+	width: device-width;
+	zoom: 1;
+	min-zoom: 0.5;
+	max-zoom: 4;
+	orientation: portrait;
+}*/
+
+/*Firefox e Chrome*/
+/*@viewport {
+	width: device-width;
+	zoom: 1;
+	min-zoom: 0.5;
+	max-zoom: 4;
+	orientation: portrait;
+}*/
+
